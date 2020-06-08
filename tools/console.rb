@@ -14,7 +14,7 @@ trip1 = Trip.new(david,house1)
 trip2 = Trip.new(david, house2)
 trip3 = Trip.new(billy, house1)
 
-binding.pry
+print Guest.pro_traveller
 0
 
 
