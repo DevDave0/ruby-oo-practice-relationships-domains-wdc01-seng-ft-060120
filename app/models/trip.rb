@@ -12,8 +12,4 @@ class Trip
         @@all
     end 
 
-    
-
-    ##trip1.listing should return house1 object
-
 end 
