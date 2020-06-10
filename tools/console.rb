@@ -17,27 +17,31 @@ end
 require 'pry'
 
 
-shilla = Bakery.new('shilla')
-breeze = Bakery.new('breeze')
+# shilla = Bakery.new('shilla')
+# breeze = Bakery.new('breeze')
 
-bread = Desserts.new('bread',shilla)
-kitkat = Desserts.new('kitkat',breeze)
+# bread = Desserts.new('bread',shilla)
+# kitkat = Desserts.new('kitkat',breeze)
 
-sugar = Ingredients.new("sugar", 20, bread)
-flour = Ingredients.new("flour", 35, bread)
-eggs = Ingredients.new('eggs', 50, bread)
-chocolate = Ingredients.new('chocolate', 50, kitkat)
-chocolate_mousse = Ingredients.new('chocolate mousse', 50, kitkat)
+# sugar = Ingredients.new("sugar", 20, bread)
+# flour = Ingredients.new("flour", 35, bread)
+# eggs = Ingredients.new('eggs', 50, bread)
+# chocolate = Ingredients.new('chocolate', 50, kitkat)
+# chocolate_mousse = Ingredients.new('chocolate mousse', 50, kitkat)
 
-bread.add_ingredient(sugar)
-bread.add_ingredient(flour)
-bread.add_ingredient(eggs)
+# bread.add_ingredient(sugar)
+# bread.add_ingredient(flour)
+# bread.add_ingredient(eggs)
 
-kitkat.add_ingredient(chocolate)
-kitkat.add_ingredient(chocolate_mousse)
+# kitkat.add_ingredient(chocolate)
+# kitkat.add_ingredient(chocolate_mousse)
 
-shilla.add_dessert(bread)
-breeze.add_dessert(kitkat)
+# bs = DessertIngredient.new(bread,sugar)
+# bf = DessertIngredient.new(bread,flour)
+# be = DessertIngredient.new(bread,eggs)
+# kc = DessertIngredient.new(kitkat,chocolate)
+# kcm = DessertIngredient.new(kitkat,chocolate_mousse)
+# ks = DessertIngredient.new(kitkat,sugar)
 
 
 # print bread.ingredients
@@ -45,14 +49,51 @@ breeze.add_dessert(kitkat)
 # print bread.bakery.name
 # print bread.calories
 
-puts shilla.shopping_list
-
-# binding.pry
+# puts shilla.shopping_list
 
 
+# david = Passenger.new('david')
+
+# billy = Driver.new('billy')
+
+# ride1 = Ride.new(david,billy,50.0)
+
+# puts david.name
 
 
-# print Ingredients.find_all_by_name('chocolate')
+2.times do 
+  Bakery.new(Faker::Kpop.i_groups)
+end
+
+10.times do 
+  Dessert.new(Faker::Dessert.variety, Bakery.all.sample) #baker.all.sample pulls a random one
+end
+
+chocolate = Ingredient.new("chocolate", 80)
+peaches = Ingredient.new('peach', 45)
+water = Ingredient.new('water', 0)
+sugar = Ingredient.new('sugar',100)
+salt = Ingredient.new('salt',8)
+eggs = Ingredient.new('egg',33)
+chocolate_chips = Ingredient.new('chocolate chips', 42)
+powdered_sugar = Ingredient.new('powdered sugar', 75)
+milk = Ingredient.new('milk', 30)
+
+DessertIngredient.new(Dessert.all.first, chocolate)
+DessertIngredient.new(Dessert.all.first, eggs)
+DessertIngredient.new(Dessert.all.first, milk)
+DessertIngredient.new(Dessert.all.first, salt)
+DessertIngredient.new(Dessert.all.first, water)
+DessertIngredient.new(Dessert.all[1], water)
+DessertIngredient.new(Dessert.all[1], salt)
+DessertIngredient.new(Dessert.all[1], milk)
+DessertIngredient.new(Dessert.all.last, milk)
+DessertIngredient.new(Dessert.all.last, peaches)
+DessertIngredient.new(Dessert.all.last, salt)
+
+
+binding.pry
+0
 
 
 
