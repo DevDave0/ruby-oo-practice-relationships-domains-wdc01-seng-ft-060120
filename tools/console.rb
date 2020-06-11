@@ -52,48 +52,52 @@ require 'pry'
 # puts shilla.shopping_list
 
 
-# david = Passenger.new('david')
+david = Passenger.new('david')
+lou = Passenger.new('lou')
 
-# billy = Driver.new('billy')
+billy = Driver.new('billy')
+frank = Driver.new('frank')
 
-# ride1 = Ride.new(david,billy,50.0)
+ride1 = Ride.new(david,billy,50.0)
+ride2 = Ride.new(david,frank,55.0)
+ride3 = Ride.new(lou,frank,60.0)
 
-# puts david.name
-
-
-2.times do 
-  Bakery.new(Faker::Kpop.i_groups)
-end
-
-10.times do 
-  Dessert.new(Faker::Dessert.variety, Bakery.all.sample) #baker.all.sample pulls a random one
-end
-
-chocolate = Ingredient.new("chocolate", 80)
-peaches = Ingredient.new('peach', 45)
-water = Ingredient.new('water', 0)
-sugar = Ingredient.new('sugar',100)
-salt = Ingredient.new('salt',8)
-eggs = Ingredient.new('egg',33)
-chocolate_chips = Ingredient.new('chocolate chips', 42)
-powdered_sugar = Ingredient.new('powdered sugar', 75)
-milk = Ingredient.new('milk', 30)
-
-DessertIngredient.new(Dessert.all.first, chocolate)
-DessertIngredient.new(Dessert.all.first, eggs)
-DessertIngredient.new(Dessert.all.first, milk)
-DessertIngredient.new(Dessert.all.first, salt)
-DessertIngredient.new(Dessert.all.first, water)
-DessertIngredient.new(Dessert.all[1], water)
-DessertIngredient.new(Dessert.all[1], salt)
-DessertIngredient.new(Dessert.all[1], milk)
-DessertIngredient.new(Dessert.all.last, milk)
-DessertIngredient.new(Dessert.all.last, peaches)
-DessertIngredient.new(Dessert.all.last, salt)
+# binding.pry
+# 0
+print Ride.average_distance
 
 
-binding.pry
-0
+# 2.times do 
+#   Bakery.new(Faker::Kpop.i_groups)
+# end
+
+# 10.times do 
+#   Dessert.new(Faker::Dessert.variety, Bakery.all.sample) #baker.all.sample pulls a random one
+# end
+
+# chocolate = Ingredient.new("chocolate", 80)
+# peaches = Ingredient.new('peach', 45)
+# water = Ingredient.new('water', 0)
+# sugar = Ingredient.new('sugar',100)
+# salt = Ingredient.new('salt',8)
+# eggs = Ingredient.new('egg',33)
+# chocolate_chips = Ingredient.new('chocolate chips', 42)
+# powdered_sugar = Ingredient.new('powdered sugar', 75)
+# milk = Ingredient.new('milk', 30)
+
+# DessertIngredient.new(Dessert.all.first, chocolate)
+# DessertIngredient.new(Dessert.all.first, eggs)
+# DessertIngredient.new(Dessert.all.first, milk)
+# DessertIngredient.new(Dessert.all.first, salt)
+# DessertIngredient.new(Dessert.all.first, water)
+# DessertIngredient.new(Dessert.all[1], water)
+# DessertIngredient.new(Dessert.all[1], salt)
+# DessertIngredient.new(Dessert.all[1], milk)
+# DessertIngredient.new(Dessert.all.last, milk)
+# DessertIngredient.new(Dessert.all.last, peaches)
+# DessertIngredient.new(Dessert.all.last, salt)
+
+
 
 
 
